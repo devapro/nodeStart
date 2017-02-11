@@ -1,0 +1,13 @@
+Новый запрос на сайте
+Сайт: <%- data.site %>
+Форма: <%- data.form %>
+Запрос:
+
+<table>
+    <% for(var i = 0; i < data.data.length; i++){ %>
+        <tr>
+            <td><%- data.data[i].name %></td>
+            <td><%- data.data[i].value %></td>
+        </tr>
+    <% } %>
+</table>

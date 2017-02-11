@@ -1,0 +1,27 @@
+<div class="box box-primary">
+    <div class="panel-body pcontent">
+        <div class="row">
+            <div class="col-sm-4">
+
+            </div>
+            <div class="col-sm-4">
+                <div class="pull-center text-center">
+                    <div class="ui-group-buttons">
+                        <button ng-click="good(item.id, 'text')" class="btn btn-success"
+                                role="button"><span class="glyphicon glyphicon-thumbs-up"></span></button>
+                        <!--<div class="or"></div>-->
+                        <button ng-click="bad(item.id, 'text')" class="btn btn-danger"
+                                role="button"><span class="glyphicon glyphicon-thumbs-down"></span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="pull-right text-right calendar">
+                    <i class="fa fa-calendar"></i><br> {{ formatDateF(showedItem.date) }}
+                </div>
+            </div>
+        </div>
+        <blockquote ng-bind-html="showedItem.text | show_html"></blockquote>
+        <img class="levitation-cat" src="/images/index/magcat.jpg" width="80" />
+    </div>
+</div>

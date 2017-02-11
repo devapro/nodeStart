@@ -1,0 +1,7 @@
+Новый запрос на сайте \n
+Сайт: <%- data.site %> \n
+Форма: <%- data.form %> \n
+Запрос: \n
+    <% for(var i = 0; i < data.data.length; i++){ %>
+    <%- data.data[i].name %> \t <%- data.data[i].value %> \n
+    <% } %>

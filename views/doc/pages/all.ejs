@@ -1,0 +1,87 @@
+<div id="page-all">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Общее описание</h1>
+                <p>
+                    Все запросы отправлять методом POST <br>
+                    Формат запроса:
+                            <pre>
+                                <code class="json">
+                                    Content-Type: application/json
+                                </code>
+                            </pre>
+                            <pre>
+                                <code class="json">
+                                    {"params":{"offset":0,"limit":100}}
+                                </code>
+                            </pre>
+                    <br/>
+                    если нет параметров, свойство <code>params = {}</code> обязательно
+                </p>
+                <p>
+                    Для запросов требующих авторизацию передаём header с токеном полученным при авторизации
+                            <pre>
+                                <code class="json">
+                                    Authorization: токен_пользователя
+
+                                    Content-Type: application/json
+                                </code>
+                            </pre>
+                </p>
+
+                <p>
+                    dev - такой аккаунт в системе один. его можно не учитывать.
+                    admin - администратор системы
+                    manager - то что в тз называется админом
+                    user
+                </p>
+
+                <p>
+                    Если сделан запрос в не правильном формате:
+                    <pre>
+                    <code class="json">
+                        {
+                          "status": 0,
+                          "message": "Error parse request data ",
+                          "result": {
+                            "error": [
+                              {
+                                "code": "data",
+                                "message": "Error parse request data "
+                              }
+                            ],
+                            "data": {}
+                          }
+                        }
+                    </code>
+                </pre>
+                </p>
+
+                <p>В случае когда в переданы не корректные параметры для запроса:
+                    <pre>
+                    <code class="json">
+                        {
+                          "status": 0,
+                          "message": "Validation error",
+                          "result": {
+                            "error": [
+                              {
+                                "code": "medimee_id",
+                                "message": "Invalid medimee_id"
+                              },
+                              {
+                                "code": "pin",
+                                "message": "Invalid pin"
+                              }
+                            ],
+                            "data": {}
+                          }
+                        }
+                    </code>
+                </pre>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

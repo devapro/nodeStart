@@ -1,0 +1,71 @@
+<div id="page-resend">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Повторный запрос кода подтверждения (запрос нужно делать с токеном пользователя)</h2>
+                <p>
+                    <b>/resend</b>
+                </p>
+
+                <table>
+                    <tr>
+                        <th>Параметры</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>нет</th>
+                        <td></td>
+                    </tr>
+                </table>
+
+                <p>
+                    пример запроса:
+                    <pre>
+                        <code class="json">
+{"params":{}}
+                        </code>
+                    </pre>
+                </p>
+
+                <p>
+                    ответ в случае ошибки:
+                    <pre>
+                        <code class="json">
+{
+    "status": 0,
+    "message": "Invalid code",
+    "data": {
+      "error": [
+        {
+          "code": "code",
+          "message": "Invalid code"
+        }
+      ],
+      "items": {}
+    }
+}
+                        </code>
+                    </pre>
+
+                </p>
+
+                <p>
+                    ответ:
+                <pre>
+                        <code class="json">
+{
+  "status": 1,
+  "message": "Resend OK",
+  "result": {
+    "error": [],
+    "data": {}
+  }
+}
+                        </code>
+                    </pre>
+                </p>
+
+                </div>
+            </div>
+        </div>
+    </div>

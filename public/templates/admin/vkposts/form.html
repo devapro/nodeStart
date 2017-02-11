@@ -1,0 +1,46 @@
+<div class="box box-primary">
+    <!-- form start -->
+    <form role="form" method="post" action="" ng-form-process="" name="form">
+        <div class="box-body">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label>Text:</label>
+                        <textarea class="form-control" ng-model="model.text" name="text"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Status:</label>
+                        <select class="form-control" name="status" ng-model="model.status">
+                            <option ng-repeat="(key, value) in lists.statuses" value="{{ value }}" >{{ key }}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <table>
+                        <tr>
+                            <th>Likes</th>
+                            <th>Comments</th>
+                            <th>Reposts</th>
+                        </tr>
+                        <tr>
+                            <td>{{ model.likes }}</td>
+                            <td>{{ model.comments }}</td>
+                            <td>{{ model.reposts }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div><!-- /.box-body -->
+
+        <div class="box-footer">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </form>
+</div>
+<span us-spinner spinner-theme="bigBlue" ng-show="loading"></span>

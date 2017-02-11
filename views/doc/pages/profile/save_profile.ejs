@@ -1,0 +1,108 @@
+<div id="page-save_profile">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Сохранение профиля</h2>
+                <p>
+                    <b>/save_profile</b>
+                </p>
+
+                <table>
+                    <tr>
+                        <th>Параметры</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>first_name</th>
+                        <td>строка</td>
+                    </tr>
+                    <tr>
+                        <th>last_name</th>
+                        <td>строка</td>
+                    </tr>
+                    <tr>
+                        <th>phone</th>
+                        <td>строка</td>
+                    </tr>
+                    <tr>
+                        <th>password</th>
+                        <td>строка</td>
+                    </tr>
+                    <tr>
+                        <th>role</th>
+                        <td>строка [ courier, customer ]</td>
+                    </tr>
+                </table>
+
+                <p>
+                    пример запроса:
+                <pre>
+                        <code class="json">
+{"params":{"email":"qt@ww.ww","first_name":"Ivan","last_name":"Ivanovich","phone":"545443333", "password":"123456", "role":"courier"}}
+                        </code>
+                    </pre>
+                </p>
+
+                <p>
+                    ответ в случае ошибки:
+                <pre>
+                        <code class="json">
+{
+  "id": 0,
+  "result": {
+    "status": 0,
+    "message": "Validation error",
+    "data": {
+      "error": [
+        {
+          "code": "first_name",
+          "message": "Invalid first name"
+        }
+      ],
+      "items": {}
+    }
+  }
+}
+                        </code>
+                    </pre>
+
+                </p>
+
+                <p>
+                    ответ:
+                <pre>
+                        <code class="json">
+{
+  "status": 1,
+  "message": "OK",
+  "result": {
+    "error": [],
+    "data": {
+      "id": "57fe7dc752a3777cfa97f869",
+      "token": "9f58bfa000468eab071342db6b0c09e7",
+      "email": "qtw9qqw3@eweww.ww",
+      "role": "courier",
+      "phone": "38106030528",
+      "first_name": "Ivan",
+      "last_name": "Ivanovich",
+      "jabroolid": "IVAN12276",
+      "avatar": {
+        "full": "http://127.0.0.1:3000/images/empty.png",
+        "preview": "http://127.0.0.1:3000/images/empty.png"
+      },
+      "created_at": 1476296135,
+      "updated_at": 1476296135,
+      "status": "active",
+      "complete_license": false,
+      "complete_bank": false,
+      "complete_vehicle": false
+    }
+  }
+}
+                        </code>
+                    </pre>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

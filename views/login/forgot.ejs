@@ -1,0 +1,34 @@
+<% css.push("/stylesheets/admin/auth.css"); %>
+<% js.push("/js/admin/auth.js"); %>
+
+<% include ../layouts/public/header.ejs %>
+
+<div class="container" ng-controller="ForgotController">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong class="">Admin panel</strong>
+                </div>
+                <div class="panel-body form-horizontal">
+                    <div class="form-group">
+                        <label for="inputEmail" class="col-sm-3 control-label">Login</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="inputEmail" placeholder="Login" required="" name="login" ng-model="form.login">
+                        </div>
+                    </div>
+                    <div class="form-group last">
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <button type="submit" class="btn btn-success btn-sm" ng-click="submitForgot()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <a href="/admin/" class="">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../layouts/public/footer.ejs %>

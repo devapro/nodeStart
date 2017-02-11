@@ -1,0 +1,56 @@
+<div id="page-add_device">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Добавить push_id (запрос нужно делать с токеном пользователя)</h2>
+                <p>
+                    <b>/add_device</b>
+                </p>
+
+                <table>
+                    <tr>
+                        <th>Параметры</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>type</th>
+                        <td>ios/android</td>
+                    </tr>
+                    <tr>
+                        <th>id</th>
+                        <td>строка</td>
+                    </tr>
+                    <tr>
+                        <th>tz</th>
+                        <td>число - +/- минуты для временной зоны пользователя</td>
+                    </tr>
+                </table>
+
+                <p>
+                    пример запроса:
+                <pre>
+                        <code class="json">
+{"params":{ "id":"ertetrreteteree4r43r4tt43t343t4t4t43t3t34t34t3t3tt", "type":"android", "tz":180}}
+                        </code>
+                    </pre>
+                </p>
+
+                <p>
+                    ответ :
+                <pre>
+                        <code class="json">
+{
+   "status": 1,
+    "message": "Save OK",
+    "data": {
+      "error": [],
+      "items": {}
+    }
+}
+                        </code>
+                    </pre>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

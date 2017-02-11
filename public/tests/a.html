@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/clients/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+<style>
+    *{
+        font-family: 'Roboto', sans-serif;
+    }
+    .label{
+        font-size: 12px;
+    }
+    .center{
+        text-align: center;
+    }
+    table img{
+        max-width: 70%;
+    }
+    .form{
+        padding: 5px;
+        font-size: 12px;
+        width: 80%;
+    }
+    h5{
+        margin: 5px;
+    }
+</style>
+<div style="width: 550px; padding: 20px;">
+    <h2>Заказать дизайн-проект</h2>
+
+    <h5>Выберите форму вашей кухни</h5>
+    <table>
+        <tr>
+            <td>
+                <div class="center">
+                    <img src="http://misskitchen.ru/wp-content/uploads/2016/11/1-1.png" />
+                </div>
+            </td>
+            <td>
+                <div class="center">
+                    <img class="center" src="http://misskitchen.ru/wp-content/uploads/2016/11/2-1.png" />
+                </div>
+            </td>
+            <td>
+                <div class="center">
+                    <img class="center" src="http://misskitchen.ru/wp-content/uploads/2016/11/3-1.png" />
+                </div>
+            </td>
+            <td>
+                <div class="center">
+                    <img class="center" src="http://misskitchen.ru/wp-content/uploads/2016/11/4-1.png" />
+                </div>
+            </td>
+            <td>
+                <div class="center">
+                    <img class="center" src="http://misskitchen.ru/wp-content/uploads/2016/11/5-1.png" />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="center"><input class="esf_input_data" type="radio" name="type"></div>
+                <div class="label center">Прямая</div>
+            </td>
+            <td>
+                <div class="center"><input class="esf_input_data" type="radio" name="type"></div>
+                <div class="label center">Угловая</div>
+            </td>
+            <td>
+                <div class="center"><input class="esf_input_data" type="radio" name="type"></div>
+                <div class="label center">Параллельная</div>
+            </td>
+            <td>
+                <div class="center"><input class="esf_input_data" type="radio" name="type"></div>
+                <div class="label center">П-образная</div>
+            </td>
+            <td>
+                <div class="center"><input class="esf_input_data" type="radio" name="type"></div>
+                <div class="label center">Добавить остров</div>
+            </td>
+        </tr>
+    </table>
+    <h5>Укажите Ваш email</h5>
+    <input type="email" class="form esf_input_data" name="email" />
+    <h5>Укажите Ваш телефон</h5>
+    <input type="phone" class="form esf_input_data" name="phone" />
+    <h5>Ваш комментарий</h5>
+    <textarea class="form esf_input_data" name="comment"></textarea>
+    <h5>Прикрепить файл</h5>
+    <input name="file_Прикрепить файл" type="file" id="attachidun_1" onchange="EsfUploadFile('attachidun_1')" class="textbox" />
+    <input type="hidden" name="Прикрепить файл" id="hidden_attachidun_1" class="esf_input_data">
+
+</div>
+</body>
+</html>

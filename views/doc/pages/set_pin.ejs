@@ -1,0 +1,105 @@
+<div id="page-set_pin">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Изменить pin по medimee_id</h2>
+                <p>
+                    <b>/set_pin</b>
+                </p>
+
+                <table>
+                    <tr>
+                        <th>Параметры</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>medimee_id</th>
+                        <td>строка id</td>
+                    </tr>
+                    <tr>
+                        <th>pin</th>
+                        <td>строка</td>
+                    </tr>
+                </table>
+
+                <p>
+                    пример запроса:
+                    <pre>
+                        <code class="json">
+{"id":12,"params":{"medimee_id":"UA3227196763", "pin":"1234"}}
+                        </code>
+                    </pre>
+                </p>
+
+                <p>
+                    ответ в случае ошибки:
+                    <pre>
+                        <code class="json">
+{
+  "id": 12,
+  "result": {
+    "status": 0,
+    "message": "Invalid Entry",
+    "data": {
+      "error": [
+        {
+          "code": "medimee_id",
+          "message": "Invalid Entry"
+        }
+      ],
+      "items": {}
+    }
+  }
+}
+                        </code>
+                    </pre>
+
+                </p>
+
+                <p>
+                    ответ:
+                    <pre>
+                        <code class="json">
+{
+  "id": 12,
+  "result": {
+    "status": 1,
+    "message": "OK",
+    "data": {
+      "error": [],
+      "items": {
+        "id": "57d6ff14b3cae6740cd381dc",
+        "email": "wefwe@ewf.ef",
+        "phone": "",
+        "first_name": "wefwe",
+        "sur_name": "wefew",
+        "employer_id": "1232134",
+        "medimee_id": "UA3227196763",
+        "avatar": {
+          "full": "",
+          "preview": ""
+        },
+        "birth_day": "",
+        "religion": "",
+        "blood_type": "",
+        "home_address": "",
+        "insurance_company": "",
+        "policy_number": "",
+        "gp_doctor_name": "",
+        "gp_practice_name": "",
+        "gp_phone_number": "",
+        "donor_card_id": "",
+        "medimee_family_id": "",
+        "visible": []
+      }
+    }
+  }
+}
+                        </code>
+                    </pre>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>

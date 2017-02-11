@@ -1,0 +1,69 @@
+<div id="page-forgot">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Вспомнить пароль</h2>
+                <p>
+                    <b>/forgot</b>
+                </p>
+
+                <table>
+                    <tr>
+                        <th>Параметры</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>email</th>
+                        <td>email</td>
+                    </tr>
+                </table>
+
+                <p>
+                    пример запроса:
+                    <pre>
+                        <code class="json">
+{"params":{"email":"test@example.com"}}
+                        </code>
+                    </pre>
+                </p>
+
+                <p>
+                    ответ в случае ошибки:
+                    <pre>
+                        <code class="json">
+{
+  "status": 0,
+  "message": "We didn't recognize this email address in our database. Please try again or sign up first",
+  "result": {
+    "error": [
+      {
+        "code": "email",
+        "message": "We didn't recognize this email address in our database. Please try again or sign up first"
+      }
+    ],
+    "data": {}
+  }
+}
+                        </code>
+                    </pre>
+                </p>
+
+                <p>
+                    ответ успешной регистрации:
+                <pre>
+                        <code class="json">
+{
+  "status": 1,
+  "message": "Send OK",
+  "result": {
+    "error": [],
+    "data": {}
+  }
+}
+                        </code>
+                    </pre>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

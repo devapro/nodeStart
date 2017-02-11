@@ -1,0 +1,76 @@
+<div id="page-upload_license">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Загрузить фото лицензии</h2>
+                <p>
+                    <b>/upload_license</b>
+                </p>
+
+                <table>
+                    <tr>
+                        <th>Параметры</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>image</th>
+                        <td>строка base64 (не более 10МБ) *</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>data:image/jpeg;base64,........</td>
+                    </tr>
+                </table>
+
+                <p>
+                    пример запроса:
+                <pre>
+                        <code class="json">
+{"params":{"image":"data:image/jpeg;base64........"}}
+                        </code>
+                    </pre>
+                </p>
+
+                <p>
+                    ответ в случае ошибки:
+                <pre>
+                        <code class="json">
+{
+  "status": 0,
+    "message": "Validation error",
+    "data": {
+      "error": [
+        {
+          "code": "image",
+          "message": "Invalid image"
+        }
+      ],
+      "items": []
+    }
+}
+                        </code>
+                    </pre>
+
+                </p>
+
+                <p>
+                    ответ:
+                <pre>
+                        <code class="json">
+{
+  "status": 1,
+    "message": "OK",
+    "data": {
+      "error": [],
+      "items": {
+         "url": "http://devapp.pro/18137-1468932290390578e20c241abfd90e40cd291.jpg"
+      }
+    }
+}
+                        </code>
+                    </pre>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

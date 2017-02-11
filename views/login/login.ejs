@@ -1,0 +1,40 @@
+<% css.push("/stylesheets/admin/auth.css"); %>
+<% js.push("/js/admin/auth.js"); %>
+
+<% include ../layouts/public/header.ejs %>
+
+<div class="container" ng-controller="LoginController">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-heading"> <strong class="">Admin panel</strong>
+
+                </div>
+                <div class="panel-body form-horizontal">
+                    <div class="form-group">
+                        <label for="inputLogin" class="col-sm-3 control-label">Login</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="inputLogin" placeholder="Login" required="" name="login" ng-model="form.login">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword" class="col-sm-3 control-label">Password</label>
+                        <div class="col-sm-9">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password" required="" name="password"  ng-model="form.password">
+                        </div>
+                    </div>
+                    <div class="form-group last">
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <button type="submit" class="btn btn-success btn-sm" ng-click="submitLogin()">Sign in</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <a href="/admin/forgot" class="">Forgot password</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../layouts/public/footer.ejs %>

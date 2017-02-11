@@ -1,0 +1,43 @@
+{
+  "port" : 3009,
+  "mongoose": {
+    "uri": "mongodb://127.0.0.1:27017/start"
+  },
+  "title":"start",
+  "base_url":"http://127.0.0.1:3009",
+  "secret": "E$%gb45GW@F$4",
+  "items_on_page": 10,
+  "files":{
+    "temp_dir" : "/home/webmaster/app/web/public/uploads/tmp",
+    "user_avatar_full" : "/home/webmaster/app/web/public/uploads/avatars/full",
+    "user_avatar_thumb" : "/home/webmaster/app/web/public/uploads/avatars/thumb",
+    "jimages_full" : "/home/webmaster/app/web/public/uploads/jimages/full",
+    "jimages_thumb" : "/home/webmaster/app/web/public/uploads/jimages/thumb",
+    "user_uploads" : "/home/webmaster/app/web/public/uploads/tmp"
+  },
+  "urls":{
+    "admin_login" : "/admin/login",
+    "url_avatar_thumb": "/uploads/avatars/thumb/",
+    "url_avatar_full": "/uploads/avatars/full/",
+    "jimages_full": "/uploads/jimages/full/",
+    "jimages_thumb": "/uploads/jimages/thumb/",
+    "user_uploads": "/uploads/tmp/"
+  },
+  "logs":{
+    "main_file": "/home/webmaster/app/web/public/uploads/tmp/log.log"
+  },
+  "sys":{
+    "admin_email": "admin@easyforms.pro",
+    "info_email": "info@easyforms.pro",
+    "enable_log_api": true
+  },
+  "mail_config": "smtps://info@easyforms.pro:1111@smtp.yandex.ru",
+  "push":{
+    "gcm_sender":"1111",
+    "ios_key":"/home/webmaster/app/web/cert/dev_key.pem",
+    "ios_cert":"/home/webmaster/app/web/cert/dev_cert.pem",
+    "dev_ios_key":"/home/webmasterwebmaster/app/web/cert/prod_key.pem",
+    "dev_ios_cert":"/home/webmaster/app/web/cert/prod_cert.pem",
+    "debug":false
+  }
+}

@@ -1,0 +1,50 @@
+body{
+    background: #495969;
+    color: #fff;
+}
+
+nav {
+    color: #fff;
+    background-color: rgb(2, 168, 243);
+}
+table.highlight > tbody > tr:hover {
+    background-color: #5f7388;
+}
+.btn-flat{
+    color: #fff;
+}
+
+.row{
+    margin-bottom: 0px;
+}
+
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea{
+    color: #000;
+}
+
+.error-block{
+    color: red;
+    font-size: 12px;
+}
+.item-form-title{
+    color: #0a0a0a;
+}
+.modal-body{
+    color: #0a0a0a;
+}
+
+.popeye-modal-container .popeye-modal {
+    width: 700px;
+}
+.configuration-popup{
+    text-align: left;
+}
+.configuration-popup .popeye-modal{
+    width: 500px;
+}
+
+.copy_to code{
+    overflow: hidden;
+    word-break: break-all;
+    white-space: pre-line;
+}

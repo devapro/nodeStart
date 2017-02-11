@@ -1,0 +1,86 @@
+<div id="page-save_license_info">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Сохранение информации о лицензии</h2>
+                <p>
+                    <b>/save_license_info</b>
+                </p>
+
+                <table>
+                    <tr>
+                        <th>Параметры</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>number</th>
+                        <td>строка *</td>
+                    </tr>
+                    <tr>
+                        <th>name</th>
+                        <td>строка *</td>
+                    </tr>
+                    <tr>
+                        <th>issue_date</th>
+                        <td>число *</td>
+                    </tr>
+                    <tr>
+                        <th>expiry_date</th>
+                        <td>число *</td>
+                    </tr>
+                    <tr>
+                        <th>country_code</th>
+                        <td>строка</td>
+                    </tr>
+                </table>
+
+                <p>
+                    пример запроса:
+                <pre>
+                        <code class="json">
+{"params":{"number":"3242343243","name":"Ivan","issue_date":"23423423432","expiry_date":"324234", "country_code":"UA"}}
+                        </code>
+                    </pre>
+                </p>
+
+                <p>
+                    ответ в случае ошибки:
+                <pre>
+                        <code class="json">
+{
+    "status": 0,
+    "message": "Validation error",
+    "data": {
+      "error": [
+        {
+          "code": "name",
+          "message": "Invalid name"
+        },
+      ],
+      "items": {}
+    }
+}
+                        </code>
+                    </pre>
+
+                </p>
+
+                <p>
+                    ответ:
+                <pre>
+                        <code class="json">
+{
+  "status": 1,
+  "message": "Save OK",
+  "result": {
+    "error": [],
+    "data": {}
+  }
+}
+                        </code>
+                    </pre>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

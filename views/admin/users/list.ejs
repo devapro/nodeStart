@@ -1,0 +1,77 @@
+<% include ../../layouts/admin/header.ejs %>
+
+<div ng-controller="listdata" ng-init="dataUrl = '<%= dataUrl %>'">
+    <div class="row">
+        <div class="col-sm-8">
+            <form action="">
+                <div class="input-group input-group-sm">
+                    <input type="text" name="search" class="form-control" ng-model="search" >
+                    <span class="input-group-btn">
+              <button class="btn btn-info btn-flat" type="button" ng-click="cancelSearch()">X</button>
+            </span>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-4">
+            <a class="btn btn-success btn-sm pull-right" ng-show="urls.create" ng-href="#" ng-create-item ng-create-url="{{urls.create}}" ng-create-template="/templates/admin/users/form.html">Add</a>
+            <a class="btn btn-danger btn-sm pull-right" ng-show="urls.delete_all" ng-href="#" ng-delete-all ng-delete-url="{{urls.delete_all}}">Remove all</a>
+        </div>
+    </div>
+
+    <div class="bs-component">
+        <table class="table table-striped table-hover">
+            <thead>
+            <tr>
+                <th ng-repeat="(key, value) in header" ng-click="sort(key)">{{value}}
+                    <span class="glyphicon sort-icon" ng-show="sortKey==key" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr dir-paginate="item in items|itemsPerPage:itemsPerPage" total-items="total_count" current-page="pageno">
+                <td ng-repeat="(key, value) in header">{{ item | show_obj:key }}</td>
+                <td style="width: 100px; text-align: center;">
+
+                    <a ng-show="urls.view" ng-href="#" ng-view-item  ng-view-id="{{item._id}}" ng-view-url="{{urls.view}}" title="View">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </a>
+
+                    <a ng-show="urls.update" ng-href="#" ng-update-item  ng-update-id="{{item._id}}" ng-update-url="{{urls.update}}" ng-update-template="/templates/admin/users/form.html" title="Update">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+
+                    <a ng-show="urls.delete" ng-href="#" ng-delete-item  ng-delete-id="{{item._id}}" ng-delete-url="{{urls.delete}}" title="Delete">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <dir-pagination-controls
+            max-size="8"
+            direction-links="true"
+            boundary-links="true"
+            on-page-change="getData(newPageNumber)" >
+    </dir-pagination-controls>
+    <span us-spinner spinner-theme="bigBlue" ng-show="loading"></span>
+</div>
+
+<script type="text/ng-template" id="viewItem.html">
+    <div class="modal-body">
+        <table class="table table-striped table-bordered detail-view">
+            <tbody>
+
+            <tr ng-repeat="(key, value) in model">
+                <th>{{ names[key] }}</th>
+                <td ng-bind-html="value | to_trusted"></td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</script>
+
+<% include ../../layouts/admin/footer.ejs %>

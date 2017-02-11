@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            То куда камера смотрит:
+        </td>
+        <td>
+            То что получилось:
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <video id="video" style="zoom: 0.25" width="1280" height="960" autoplay></video>
+        </td>
+        <td>
+            <canvas id="canvas" style="zoom: 0.25" width="1280" height="960"></canvas>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Сделать фото : <button id="snap">Фото</button>
+        </td>
+        <td>
+            Если получилось, сохраняем :
+            <a href="#" class="button" id="save" download="image.png">Сохранить</a>
+        </td>
+    </tr>
+</table>
+
+
+
+<script>
+    // Grab elements, create settings, etc.
+    var video = document.getElementById('video');
+
+    // Get access to the camera!
+    if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        // Not adding `{ audio: true }` since we only want video now
+        navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+            video.src = window.URL.createObjectURL(stream);
+            video.play();
+        });
+    }
+
+    // Elements for taking the snapshot
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var video = document.getElementById('video');
+
+    // Trigger photo take
+    document.getElementById("snap").addEventListener("click", function() {
+        context.drawImage(video, 0, 0, 1280, 960);
+    });
+
+    // Trigger photo take
+    document.getElementById("save").addEventListener("click", function() {
+        var dataURL = canvas.toDataURL('image/png');
+        document.getElementById("save").href = dataURL;
+    });
+</script>
+</body>
+</html>

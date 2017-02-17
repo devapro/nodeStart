@@ -14,10 +14,10 @@ router.use('/admin', login);
 const api = require('../routes/api/v1');
 router.use('/api', api);
 
-const doc = require('../routes/doc');
-router.use('/docs', doc);
-
 const admin = require('../routes/admin');
 router.use('/admin', admin);
+
+const index = require('../routes/public/index');
+router.use('/', index);
 
 module.exports = router;

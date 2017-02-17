@@ -1,0 +1,124 @@
+html, body {
+    height: 100%;
+    position: relative;
+    padding: 20px 0px;
+}
+.file-upload-indicator{
+    display: none;
+}
+.select2-container .select2-selection--single{
+    height: 37px !important;
+}
+.file-preview-frame, .file-preview-image, .file-preview-other {
+    max-height: 160px;
+    height: auto !important;
+}
+tr.odd td {
+    max-width: 300px;
+    word-wrap: break-word;
+}
+.detail-view td {
+    max-width: 400px;
+    word-wrap: break-word;
+}
+/**  **/
+.fancybox-lock .fancybox-overlay {
+    z-index: 9999;
+}
+.chat-content-wrap{
+    height: 1px;
+}
+.chat-item{
+    z-index: 9999;
+    width: 500px;
+    position: fixed;
+    top: 30%;
+    left: 20%;
+}
+.chat
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #B3A9A9;
+}
+
+.chat li.left .chat-body
+{
+    margin-left: 60px;
+}
+
+.chat li.right .chat-body
+{
+    margin-right: 60px;
+}
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+.panel-body
+{
+    overflow-y: scroll;
+    height: 350px;
+}
+
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+.chat-container
+{
+    height: 100%;
+}
+.complain{
+    color: red !important;
+}
+
+.sort-icon {
+    font-size: 9px;
+    margin-left: 5px;
+}
+
+th {
+    cursor:pointer;
+}
+
+.popeye-modal-container {
+    z-index: 9999;
+}
+.preview{
+    max-width: 100%;
+}
+body>.ui-select-bootstrap.open {
+    z-index: 999999;
+    margin-top: -20px;
+}

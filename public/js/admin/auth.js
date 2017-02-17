@@ -1,4 +1,6 @@
-var app = angular.module('japp');
+'use strict';
+
+var app = angular.module('angularAdmin');
 app.controller('LoginController',function($scope, $http, Notification){
     $scope.loading = false;
     $scope.form = {};

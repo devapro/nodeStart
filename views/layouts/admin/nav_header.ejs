@@ -24,29 +24,29 @@
                 </li>
                 <% } %>
                 <% if(sys_user.can(["dev", "admin"])){ %>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-files-o"></i>
-                        <span>Posts</span>
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/admin/vkposts"><i class="fa fa-circle-o"></i> Vk Posts</a></li>
-                        <li><a href="/admin/image_posts"><i class="fa fa-circle-o"></i> Image Posts</a></li>
-                        <li><a href="/admin/text_posts"><i class="fa fa-circle-o"></i> Text Posts</a></li>
-                    </ul>
-                </li>
+                <!--<li class="dropdown">-->
+                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+                        <!--<i class="fa fa-files-o"></i>-->
+                        <!--<span>Posts</span>-->
+                        <!--<b class="caret"></b>-->
+                    <!--</a>-->
+                    <!--<ul class="dropdown-menu">-->
+                        <!--<li><a href="/admin/vkposts"><i class="fa fa-circle-o"></i> Vk Posts</a></li>-->
+                        <!--<li><a href="/admin/image_posts"><i class="fa fa-circle-o"></i> Image Posts</a></li>-->
+                        <!--<li><a href="/admin/text_posts"><i class="fa fa-circle-o"></i> Text Posts</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
 
-                <li>
-                    <a href="/admin/categories">
-                        <i class="fa fa-th"></i> <span>Categories</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/admin/promo_messages">
-                        <i class="fa fa-th"></i> <span>Promo</span>
-                    </a>
-                </li>
+                <!--<li>-->
+                    <!--<a href="/admin/categories">-->
+                        <!--<i class="fa fa-th"></i> <span>Categories</span>-->
+                    <!--</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="/admin/promo_messages">-->
+                        <!--<i class="fa fa-th"></i> <span>Promo</span>-->
+                    <!--</a>-->
+                <!--</li>-->
                 <% } %>
 
                 <% if(sys_user.can("dev")){ %>

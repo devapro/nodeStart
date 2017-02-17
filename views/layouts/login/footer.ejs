@@ -1,0 +1,31 @@
+</div><!-- ./wrapper -->
+
+<!-- jQuery 2.1.4 -->
+<script src="/bower_components/jquery/dist/jquery.min.js" type="application/javascript"></script>
+
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js" type="application/javascript"></script>
+<script src="/bower_components/angular/angular.min.js" type="application/javascript"></script>
+<script src="/bower_components/angular-ui-notification/dist/angular-ui-notification.min.js" type="application/javascript"></script>
+<script src="/bower_components/spin.js/spin.js" type="application/javascript"></script>
+<script src="/bower_components/angular-spinner/angular-spinner.js" type="application/javascript"></script>
+
+<script src="/bower_components/angular-popeye/release/popeye.js" type="application/javascript"></script>
+<script src="/bower_components/angularUtils-pagination/dirPagination.js" type="application/javascript"></script>
+
+<script src="/bower_components/ng-file-upload-shim/ng-file-upload-shim.min.js" type="application/javascript"></script>
+<script src="/bower_components/ng-file-upload/ng-file-upload.min.js" type="application/javascript"></script>
+
+<script src="/bower_components/moment/moment.js" type="application/javascript"></script>
+<script src="/bower_components/angular-moment/angular-moment.js" type="application/javascript"></script>
+
+<script src="/bower_components/angularjs-datepicker/src/js/angular-datepicker.js" type="application/javascript"></script>
+<script src="/bower_components/angular-ui-select/dist/select.min.js" type="application/javascript"></script>
+
+<script src="/js/admin/app.js"  type="application/javascript"></script>
+
+<% for (var i = 0; i < js.length; i++) {%>
+<script src="<%= js[i] %>"></script>
+<% } %>
+
+</body>
+</html>

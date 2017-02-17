@@ -1,0 +1,26 @@
+.form-control{
+    display: inline-block;
+    height: 37px;
+}
+.btn-success{
+    background: #029e41;
+}
+.btn-primary{
+    background: #5a88b2;
+}
+.form-group label{
+    color: #899198;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.popeye-modal-container{
+    background-color: rgba(102, 109, 115, 0.55);
+}
+.popeye-modal-container .popeye-modal {
+    width: 500px;
+}
+.modal-body h2{
+    font-size: 20pt;
+    color: #000;
+    text-align: center;
+}
